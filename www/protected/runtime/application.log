@@ -1,0 +1,595 @@
+2021/04/21 16:21:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vw_adz_test.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2021/04/21 16:21:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+	`last_name` ,
+	`email` ,
+	`ip_addr` ,
+	`created_on` ,
+	`title` varchar(255)...' at line 3. The SQL statement executed was: CREATE TABLE `webinar_attendees` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`first_name` ,
+	`last_name` ,
+	`email` ,
+	`ip_addr` ,
+	`created_on` ,
+	`title` varchar(255) NOT NULL,
+	`content` text
+).
+2021/04/21 16:21:12 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '
+	`last_name` ,
+	`email` ,
+	`ip_addr` ,
+	`created_on` ,
+	`title` varchar(255)...' at line 3. The SQL statement executed was: CREATE TABLE `webinar_attendees` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`first_name` ,
+	`last_name` ,
+	`email` ,
+	`ip_addr` ,
+	`created_on` ,
+	`title` varchar(255) NOT NULL,
+	`content` text
+) in /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbMigration.php(250): CDbCommand->createTable('webinar_attende...', Array, NULL)
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/migrations/m210421_154911_vw_test.php(8): CDbMigration->createTable('webinar_attende...', Array)
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(415): m210421_154911_vw_test->up()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m210421_154911_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CConsoleApplication->processRequest()
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/yiic.php(33): CApplication->run()
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic.php(7): require_once('/Users/adz/Proj...')
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic(4): require_once('/Users/adz/Proj...')
+#13 {main}
+---
+2021/04/21 16:31:36 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'unsigned pk,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15)...' at line 2. The SQL statement executed was: CREATE TABLE `webinar_attendees` (
+	`id` unsigned pk,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL
+).
+2021/04/21 16:31:36 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'unsigned pk,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15)...' at line 2. The SQL statement executed was: CREATE TABLE `webinar_attendees` (
+	`id` unsigned pk,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL
+) in /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbMigration.php(250): CDbCommand->createTable('webinar_attende...', Array, NULL)
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/migrations/m210421_154911_vw_test.php(8): CDbMigration->createTable('webinar_attende...', Array)
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(415): m210421_154911_vw_test->up()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m210421_154911_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CConsoleApplication->processRequest()
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/yiic.php(33): CApplication->run()
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic.php(7): require_once('/Users/adz/Proj...')
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic(4): require_once('/Users/adz/Proj...')
+#13 {main}
+---
+2021/04/21 16:32:13 [error] [exception.TypeError] TypeError: Illegal offset type in isset or empty in /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/schema/CDbSchema.php:343
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/schema/CDbSchema.php(377): CDbSchema->getColumnType(Array)
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php(1352): CDbSchema->createTable('webinar_attende...', Array, NULL)
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbMigration.php(250): CDbCommand->createTable('webinar_attende...', Array, NULL)
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/migrations/m210421_154911_vw_test.php(8): CDbMigration->createTable('webinar_attende...', Array)
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(415): m210421_154911_vw_test->up()
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m210421_154911_...')
+#6 [internal function]: MigrateCommand->actionUp(Array)
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CConsoleApplication->processRequest()
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/framework/yiic.php(33): CApplication->run()
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic.php(7): require_once('/Users/adz/Proj...')
+#13 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic(4): require_once('/Users/adz/Proj...')
+#14 {main}
+---
+2021/04/21 16:38:48 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'unsigned,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DE...' at line 2. The SQL statement executed was: CREATE TABLE `webinar_attendees` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY unsigned,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL
+).
+2021/04/21 16:38:48 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'unsigned,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DE...' at line 2. The SQL statement executed was: CREATE TABLE `webinar_attendees` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY unsigned,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL
+) in /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbMigration.php(250): CDbCommand->createTable('webinar_attende...', Array, NULL)
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/migrations/m210421_154911_vw_test.php(8): CDbMigration->createTable('webinar_attende...', Array)
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(415): m210421_154911_vw_test->up()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m210421_154911_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CConsoleApplication->processRequest()
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/yiic.php(33): CApplication->run()
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic.php(7): require_once('/Users/adz/Proj...')
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic(4): require_once('/Users/adz/Proj...')
+#13 {main}
+---
+2021/04/21 16:39:20 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key. The SQL statement executed was: CREATE TABLE `webinar_attendees` (
+	`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL
+).
+2021/04/21 16:39:20 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key. The SQL statement executed was: CREATE TABLE `webinar_attendees` (
+	`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL
+) in /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbMigration.php(250): CDbCommand->createTable('webinar_attende...', Array, NULL)
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/migrations/m210421_154911_vw_test.php(8): CDbMigration->createTable('webinar_attende...', Array)
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(415): m210421_154911_vw_test->up()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m210421_154911_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CConsoleApplication->processRequest()
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/yiic.php(33): CApplication->run()
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic.php(7): require_once('/Users/adz/Proj...')
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic(4): require_once('/Users/adz/Proj...')
+#13 {main}
+---
+2021/04/21 16:43:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key. The SQL statement executed was: CREATE TABLE `as_%webinar_attendees` (
+	`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL
+) .
+2021/04/21 16:43:56 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key. The SQL statement executed was: CREATE TABLE `as_%webinar_attendees` (
+	`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL
+)  in /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbMigration.php(250): CDbCommand->createTable('{{%webinar_atte...', Array, '')
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/migrations/m210421_154911_vw_test.php(14): CDbMigration->createTable('{{%webinar_atte...', Array, '')
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(415): m210421_154911_vw_test->up()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m210421_154911_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CConsoleApplication->processRequest()
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/yiic.php(33): CApplication->run()
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic.php(7): require_once('/Users/adz/Proj...')
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic(4): require_once('/Users/adz/Proj...')
+#13 {main}
+---
+2021/04/21 16:48:06 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key. The SQL statement executed was: CREATE TABLE `as_webinar_attendees` (
+	`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL
+) .
+2021/04/21 16:48:06 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key. The SQL statement executed was: CREATE TABLE `as_webinar_attendees` (
+	`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL
+)  in /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbMigration.php(250): CDbCommand->createTable('{{webinar_atten...', Array, '')
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/migrations/m210421_154911_vw_test.php(14): CDbMigration->createTable('{{webinar_atten...', Array, '')
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(415): m210421_154911_vw_test->up()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m210421_154911_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CConsoleApplication->processRequest()
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/yiic.php(33): CApplication->run()
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic.php(7): require_once('/Users/adz/Proj...')
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic(4): require_once('/Users/adz/Proj...')
+#13 {main}
+---
+2021/04/21 16:53:27 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vw_adz_test.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2021/04/21 16:53:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 8. The SQL statement executed was: CREATE TABLE `as_webinar_attendees` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL
+) lalalalamaw.
+2021/04/21 16:53:28 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 8. The SQL statement executed was: CREATE TABLE `as_webinar_attendees` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL
+) lalalalamaw in /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbMigration.php(250): CDbCommand->createTable('{{webinar_atten...', Array, 'lalalalamaw')
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/migrations/m210421_154911_vw_test.php(14): CDbMigration->createTable('{{webinar_atten...', Array, 'lalalalamaw')
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(415): m210421_154911_vw_test->up()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m210421_154911_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CConsoleApplication->processRequest()
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/yiic.php(33): CApplication->run()
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic.php(7): require_once('/Users/adz/Proj...')
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic(4): require_once('/Users/adz/Proj...')
+#13 {main}
+---
+2021/04/21 16:56:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 9. The SQL statement executed was: CREATE TABLE `as_webinar_attendees` (
+	`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL,
+	PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 lalalalamaw.
+2021/04/21 16:56:42 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 9. The SQL statement executed was: CREATE TABLE `as_webinar_attendees` (
+	`id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+	`first_name` varchar(15) DEFAULT NULL,
+	`last_name` varchar(15) DEFAULT NULL,
+	`email` varchar(255) DEFAULT NULL,
+	`ip_addr` varchar(15) DEFAULT NULL,
+	`created_on` datetime NOT NULL,
+	PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 lalalalamaw in /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php(1352): CDbCommand->execute()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbMigration.php(250): CDbCommand->createTable('{{webinar_atten...', Array, 'ENGINE=InnoDB D...')
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/migrations/m210421_154911_vw_test.php(15): CDbMigration->createTable('{{webinar_atten...', Array, 'ENGINE=InnoDB D...')
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(415): m210421_154911_vw_test->up()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m210421_154911_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CConsoleApplication->processRequest()
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/yiic.php(33): CApplication->run()
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic.php(7): require_once('/Users/adz/Proj...')
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic(4): require_once('/Users/adz/Proj...')
+#13 {main}
+---
+2021/04/21 17:04:26 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vw_adz_test.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2021/04/21 17:04:28 [error] [php] include(m210421_154911_vw_test.php): Failed to open stream: No such file or directory (/Users/adz/Projects/www/yii1-test/1.1.16/framework/YiiBase.php:432)
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(414): MigrateCommand->instantiateMigration()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp()
+#2 unknown(0): MigrateCommand->actionUp()
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleCommandRunner.php(71): MigrateCommand->run()
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CConsoleApplication->processRequest()
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/yiic.php(33): CConsoleApplication->run()
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic.php(7): require_once()
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/yiic(4): require_once()
+
+2021/04/21 19:35:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vw_adz_test.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2021/04/21 19:41:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vw_adz_test.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2021/04/21 20:45:26 [error] [php] count(): Parameter must be an array or an object that implements Countable (/Users/adz/Projects/www/yii1-test/1.1.16/framework/gii/generators/model/ModelCode.php:371)
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/gii/CCodeGenerator.php(162): ModelCode->prepare()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/gii/CCodeGenerator.php(63): ModelGenerator->prepare()
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/actions/CInlineAction.php(49): ModelGenerator->actionIndex()
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(286): ModelGenerator->runAction()
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(265): ModelGenerator->runActionWithFilters()
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): ModelGenerator->run()
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=gii/model/index
+in /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php (13)
+2021/04/21 21:19:30 [error] [exception.CException] CException: CHttpRequest and its behaviors do not have a method or closure named "userHostAddress". in /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/controllers/WebinarController.php(69): CComponent->__call('userHostAddress', Array)
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/actions/CInlineAction.php(49): WebinarController->actionCreate()
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('create')
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/create')
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=webinar/create
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/create
+---
+2021/04/21 21:20:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '1619040009' for column `vw_adz_test`.`as_webinar_attendees`.`created_on` at row 1. The SQL statement executed was: INSERT INTO `as_webinar_attendees` (`first_name`, `last_name`, `email`, `ip_addr`, `created_on`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/controllers/WebinarController.php (71)
+in /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php (13)
+2021/04/21 21:20:09 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect datetime value: '1619040009' for column `vw_adz_test`.`as_webinar_attendees`.`created_on` at row 1. The SQL statement executed was: INSERT INTO `as_webinar_attendees` (`first_name`, `last_name`, `email`, `ip_addr`, `created_on`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4) in /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/controllers/WebinarController.php(71): CActiveRecord->save()
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/actions/CInlineAction.php(49): WebinarController->actionCreate()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/create')
+#14 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#15 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=webinar/create
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/create
+---
+2021/04/21 21:24:31 [error] [exception.Error] Error: Access to undeclared static property: Yii::$app in /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/controllers/WebinarController.php:65
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/actions/CInlineAction.php(49): WebinarController->actionCreate()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('create')
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/create')
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=webinar/create
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/index
+---
+2021/04/21 21:27:34 [error] [exception.CException] CException: Property "WebinarController.user" is not defined. in /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/controllers/WebinarController.php(65): CComponent->__get('user')
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/actions/CInlineAction.php(49): WebinarController->actionCreate()
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('create')
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/create')
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=webinar/create
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/index
+---
+2021/04/21 21:27:58 [error] [exception.Error] Error: Access to undeclared static property: Yii::$app in /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/controllers/WebinarController.php:65
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/actions/CInlineAction.php(49): WebinarController->actionCreate()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('create')
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/create')
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=webinar/create
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/index
+---
+2021/04/21 21:28:06 [error] [exception.Error] Error: Access to undeclared static property: Yii::$app in /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/controllers/WebinarController.php:65
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/actions/CInlineAction.php(49): WebinarController->actionCreate()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('create')
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/create')
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=webinar/create
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/index
+---
+2021/04/21 21:28:07 [error] [exception.Error] Error: Access to undeclared static property: Yii::$app in /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/controllers/WebinarController.php:65
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/actions/CInlineAction.php(49): WebinarController->actionCreate()
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('create')
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/create')
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=webinar/create
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/index
+---
+2021/04/21 21:28:38 [error] [exception.CException] CException: CWebUser and its behaviors do not have a method or closure named "isGuest". in /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/controllers/WebinarController.php(65): CComponent->__call('isGuest', Array)
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/actions/CInlineAction.php(49): WebinarController->actionCreate()
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('create')
+#11 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/create')
+#12 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#13 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=webinar/create
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/index
+---
+2021/04/21 21:32:06 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "success". in /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php:483
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(270): CController->missingAction('success')
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('success')
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/success')
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=webinar/success&id=2
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/create
+---
+2021/04/21 21:34:32 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "success". in /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php:483
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(270): CController->missingAction('success')
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('success')
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/success')
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=webinar/success
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/create
+---
+2021/04/21 21:40:01 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "success". in /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php:483
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(270): CController->missingAction('success')
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('success')
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/success')
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=webinar/success
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/create
+---
+2021/04/21 21:40:05 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "success". in /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php:483
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(270): CController->missingAction('success')
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('success')
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/success')
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=webinar/success
+---
+2021/04/21 22:10:59 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "create". in /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php:483
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(270): CController->missingAction('create')
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('create')
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('site/create')
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=site/create
+HTTP_REFERER=http://localhost:9083/index.php?r=site/index
+---
+2021/04/21 22:14:01 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "success". in /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php:483
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(270): CController->missingAction('success')
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('success')
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/success')
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=webinar/success
+---
+2021/04/21 22:14:12 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "success". in /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php:483
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(270): CController->missingAction('success')
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('success')
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('webinar/success')
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=webinar/success&id=4
+---
+2021/04/21 22:20:23 [error] [exception.CException] CException: CWebUser and its behaviors do not have a method or closure named "isGuest". in /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/controllers/SiteController.php(30): CComponent->__call('isGuest', Array)
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/index
+---
+2021/04/21 22:21:08 [error] [exception.CException] CException: CWebUser and its behaviors do not have a method or closure named "isGuest". in /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/adz/Projects/www/yii1-test/1.1.16/www/protected/controllers/SiteController.php(30): CComponent->__call('isGuest', Array)
+#1 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#2 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Users/adz/Projects/www/yii1-test/1.1.16/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#7 /Users/adz/Projects/www/yii1-test/1.1.16/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#8 /Users/adz/Projects/www/yii1-test/1.1.16/www/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://localhost:9083/index.php?r=webinar/index
+---
